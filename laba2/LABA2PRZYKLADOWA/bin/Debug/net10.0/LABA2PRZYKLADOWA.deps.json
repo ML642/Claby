@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "LABA2PRZYKLADOWA/1.0.0": {
+        "runtime": {
+          "LABA2PRZYKLADOWA.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "LABA2PRZYKLADOWA/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

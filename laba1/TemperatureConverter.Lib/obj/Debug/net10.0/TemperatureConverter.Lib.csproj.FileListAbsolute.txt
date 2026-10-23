@@ -1,0 +1,11 @@
+C:\Users\gitfo\Desktop\Proga c#\laba1\TemperatureConverter.Lib\bin\Debug\net10.0\TemperatureConverter.Lib.deps.json
+C:\Users\gitfo\Desktop\Proga c#\laba1\TemperatureConverter.Lib\bin\Debug\net10.0\TemperatureConverter.Lib.dll
+C:\Users\gitfo\Desktop\Proga c#\laba1\TemperatureConverter.Lib\bin\Debug\net10.0\TemperatureConverter.Lib.pdb
+C:\Users\gitfo\Desktop\Proga c#\laba1\TemperatureConverter.Lib\obj\Debug\net10.0\TemperatureConverter.Lib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gitfo\Desktop\Proga c#\laba1\TemperatureConverter.Lib\obj\Debug\net10.0\TemperatureConverter.Lib.AssemblyInfoInputs.cache
+C:\Users\gitfo\Desktop\Proga c#\laba1\TemperatureConverter.Lib\obj\Debug\net10.0\TemperatureConverter.Lib.AssemblyInfo.cs
+C:\Users\gitfo\Desktop\Proga c#\laba1\TemperatureConverter.Lib\obj\Debug\net10.0\TemperatureConverter.Lib.csproj.CoreCompileInputs.cache
+C:\Users\gitfo\Desktop\Proga c#\laba1\TemperatureConverter.Lib\obj\Debug\net10.0\TemperatureConverter.Lib.dll
+C:\Users\gitfo\Desktop\Proga c#\laba1\TemperatureConverter.Lib\obj\Debug\net10.0\refint\TemperatureConverter.Lib.dll
+C:\Users\gitfo\Desktop\Proga c#\laba1\TemperatureConverter.Lib\obj\Debug\net10.0\TemperatureConverter.Lib.pdb
+C:\Users\gitfo\Desktop\Proga c#\laba1\TemperatureConverter.Lib\obj\Debug\net10.0\ref\TemperatureConverter.Lib.dll

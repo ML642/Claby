@@ -1,0 +1,14 @@
+C:\Users\gitfo\Desktop\Proga c#\laba_graphs\Graphss\bin\Debug\net10.0\Graphss.exe
+C:\Users\gitfo\Desktop\Proga c#\laba_graphs\Graphss\bin\Debug\net10.0\Graphss.deps.json
+C:\Users\gitfo\Desktop\Proga c#\laba_graphs\Graphss\bin\Debug\net10.0\Graphss.runtimeconfig.json
+C:\Users\gitfo\Desktop\Proga c#\laba_graphs\Graphss\bin\Debug\net10.0\Graphss.dll
+C:\Users\gitfo\Desktop\Proga c#\laba_graphs\Graphss\bin\Debug\net10.0\Graphss.pdb
+C:\Users\gitfo\Desktop\Proga c#\laba_graphs\Graphss\obj\Debug\net10.0\Graphss.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gitfo\Desktop\Proga c#\laba_graphs\Graphss\obj\Debug\net10.0\Graphss.AssemblyInfoInputs.cache
+C:\Users\gitfo\Desktop\Proga c#\laba_graphs\Graphss\obj\Debug\net10.0\Graphss.AssemblyInfo.cs
+C:\Users\gitfo\Desktop\Proga c#\laba_graphs\Graphss\obj\Debug\net10.0\Graphss.csproj.CoreCompileInputs.cache
+C:\Users\gitfo\Desktop\Proga c#\laba_graphs\Graphss\obj\Debug\net10.0\Graphss.dll
+C:\Users\gitfo\Desktop\Proga c#\laba_graphs\Graphss\obj\Debug\net10.0\refint\Graphss.dll
+C:\Users\gitfo\Desktop\Proga c#\laba_graphs\Graphss\obj\Debug\net10.0\Graphss.pdb
+C:\Users\gitfo\Desktop\Proga c#\laba_graphs\Graphss\obj\Debug\net10.0\Graphss.genruntimeconfig.cache
+C:\Users\gitfo\Desktop\Proga c#\laba_graphs\Graphss\obj\Debug\net10.0\ref\Graphss.dll

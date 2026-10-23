@@ -1,0 +1,14 @@
+C:\Users\gitfo\Desktop\Proga c#\laba2\LABA2PRZYKLADOWA\bin\Debug\net10.0\LABA2PRZYKLADOWA.exe
+C:\Users\gitfo\Desktop\Proga c#\laba2\LABA2PRZYKLADOWA\bin\Debug\net10.0\LABA2PRZYKLADOWA.deps.json
+C:\Users\gitfo\Desktop\Proga c#\laba2\LABA2PRZYKLADOWA\bin\Debug\net10.0\LABA2PRZYKLADOWA.runtimeconfig.json
+C:\Users\gitfo\Desktop\Proga c#\laba2\LABA2PRZYKLADOWA\bin\Debug\net10.0\LABA2PRZYKLADOWA.dll
+C:\Users\gitfo\Desktop\Proga c#\laba2\LABA2PRZYKLADOWA\bin\Debug\net10.0\LABA2PRZYKLADOWA.pdb
+C:\Users\gitfo\Desktop\Proga c#\laba2\LABA2PRZYKLADOWA\obj\Debug\net10.0\LABA2PRZYKLADOWA.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gitfo\Desktop\Proga c#\laba2\LABA2PRZYKLADOWA\obj\Debug\net10.0\LABA2PRZYKLADOWA.AssemblyInfoInputs.cache
+C:\Users\gitfo\Desktop\Proga c#\laba2\LABA2PRZYKLADOWA\obj\Debug\net10.0\LABA2PRZYKLADOWA.AssemblyInfo.cs
+C:\Users\gitfo\Desktop\Proga c#\laba2\LABA2PRZYKLADOWA\obj\Debug\net10.0\LABA2PRZYKLADOWA.csproj.CoreCompileInputs.cache
+C:\Users\gitfo\Desktop\Proga c#\laba2\LABA2PRZYKLADOWA\obj\Debug\net10.0\LABA2PRZYKLADOWA.dll
+C:\Users\gitfo\Desktop\Proga c#\laba2\LABA2PRZYKLADOWA\obj\Debug\net10.0\refint\LABA2PRZYKLADOWA.dll
+C:\Users\gitfo\Desktop\Proga c#\laba2\LABA2PRZYKLADOWA\obj\Debug\net10.0\LABA2PRZYKLADOWA.pdb
+C:\Users\gitfo\Desktop\Proga c#\laba2\LABA2PRZYKLADOWA\obj\Debug\net10.0\LABA2PRZYKLADOWA.genruntimeconfig.cache
+C:\Users\gitfo\Desktop\Proga c#\laba2\LABA2PRZYKLADOWA\obj\Debug\net10.0\ref\LABA2PRZYKLADOWA.dll
