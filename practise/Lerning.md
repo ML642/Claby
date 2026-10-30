@@ -1050,3 +1050,478 @@ TKey
 TPriority
     można porównywać przez CompareTo()
 ```
+# C# — dodatkowe constraints generyczne
+
+## 1. `INumber<T>`
+
+`INumber<T>` służy do tworzenia generycznego kodu działającego na liczbach.
+
+```csharp
+using System.Numerics;
+
+public static T Add<T>(T a, T b)
+    where T : INumber<T>
+{
+    return a + b;
+}
+```
+
+Działa np. dla:
+
+```csharp
+int
+double
+decimal
+BigInteger
+```
+
+Przykład:
+
+```csharp
+int a = Add(2, 3);
+double b = Add(2.5, 3.1);
+```
+
+Dzięki `INumber<T>` można używać operacji takich jak:
+
+```csharp
++
+-
+*
+/
+<
+>
+```
+
+---
+
+## 2. `IBinaryInteger<T>`
+
+Constraint dla typów całkowitych.
+
+```csharp
+where T : IBinaryInteger<T>
+```
+
+Przykładowe typy:
+
+```csharp
+int
+long
+short
+BigInteger
+```
+
+Przydatne, gdy metoda ma działać tylko na liczbach całkowitych.
+
+---
+
+## 3. `IFloatingPoint<T>`
+
+Constraint dla liczb zmiennoprzecinkowych.
+
+```csharp
+where T : IFloatingPoint<T>
+```
+
+Przydatne, jeśli metoda wymaga operacji specyficznych dla liczb typu floating point.
+
+---
+
+## 4. `IFloatingPointIeee754<T>`
+
+Constraint dla liczb zgodnych ze standardem IEEE 754.
+
+```csharp
+where T : IFloatingPointIeee754<T>
+```
+
+Przykłady:
+
+```csharp
+float
+double
+Half
+```
+
+---
+
+## 5. `INumberBase<T>`
+
+Bardziej podstawowy interfejs liczbowy.
+
+```csharp
+where T : INumberBase<T>
+```
+
+Używa się go wtedy, gdy nie potrzebujemy wszystkich możliwości `INumber<T>`.
+
+---
+
+# 6. Constraints dla konkretnych operatorów
+
+Można wymagać tylko jednej konkretnej operacji.
+
+## Dodawanie
+
+```csharp
+where T : IAdditionOperators<T, T, T>
+```
+
+Przykład:
+
+```csharp
+public static T Add<T>(T a, T b)
+    where T : IAdditionOperators<T, T, T>
+{
+    return a + b;
+}
+```
+
+---
+
+## Odejmowanie
+
+```csharp
+where T : ISubtractionOperators<T, T, T>
+```
+
+---
+
+## Mnożenie
+
+```csharp
+where T : IMultiplyOperators<T, T, T>
+```
+
+---
+
+## Dzielenie
+
+```csharp
+where T : IDivisionOperators<T, T, T>
+```
+
+---
+
+# 7. `IComparable<T>`
+
+Constraint oznacza:
+
+> Obiekty typu `T` można uporządkować.
+
+```csharp
+where T : IComparable<T>
+```
+
+Przykład:
+
+```csharp
+public static T Max<T>(T a, T b)
+    where T : IComparable<T>
+{
+    return a.CompareTo(b) > 0 ? a : b;
+}
+```
+
+Działa dla:
+
+```csharp
+int
+double
+string
+DateTime
+```
+
+oraz własnych klas implementujących:
+
+```csharp
+IComparable<T>
+```
+
+Ważne:
+
+```csharp
+where T : IComparable<T>
+```
+
+nie oznacza, że `T` jest liczbą.
+
+Oznacza tylko, że można ustalić kolejność elementów.
+
+---
+
+# 8. `IEquatable<T>`
+
+Constraint oznacza:
+
+> Obiekty typu `T` można porównywać pod względem równości.
+
+```csharp
+where T : IEquatable<T>
+```
+
+Dzięki temu można używać:
+
+```csharp
+a.Equals(b)
+```
+
+Przykład:
+
+```csharp
+public static bool Same<T>(T a, T b)
+    where T : IEquatable<T>
+{
+    return a.Equals(b);
+}
+```
+
+---
+
+# 9. `IParsable<T>`
+
+Pozwala tworzyć generyczny kod parsujący wartości ze `string`.
+
+```csharp
+where T : IParsable<T>
+```
+
+Przykład:
+
+```csharp
+public static T Read<T>(string text)
+    where T : IParsable<T>
+{
+    return T.Parse(text, null);
+}
+```
+
+Użycie:
+
+```csharp
+int x = Read<int>("123");
+
+double y = Read<double>("3.14");
+
+DateTime d = Read<DateTime>("2026-10-30");
+```
+
+---
+
+# 10. `ISpanParsable<T>`
+
+Podobne do `IParsable<T>`, ale pozwala parsować z:
+
+```csharp
+ReadOnlySpan<char>
+```
+
+```csharp
+where T : ISpanParsable<T>
+```
+
+Jest używane głównie w bardziej wydajnym kodzie, gdzie chcemy ograniczyć tworzenie nowych obiektów `string`.
+
+---
+
+# 11. `IEnumerable<T>` jako constraint
+
+Można wymagać, aby dany typ był iterowalny.
+
+```csharp
+public static void Print<TCollection, T>(
+    TCollection collection)
+    where TCollection : IEnumerable<T>
+{
+    foreach (var item in collection)
+    {
+        Console.WriteLine(item);
+    }
+}
+```
+
+Często jednak prościej jest po prostu przyjąć:
+
+```csharp
+public static void Print<T>(
+    IEnumerable<T> collection)
+{
+}
+```
+
+---
+
+# 12. A co ze `string`?
+
+Nie ma sensu pisać:
+
+```csharp
+where T : string
+```
+
+Jeżeli metoda ma działać tylko na `string`, zwykle po prostu piszemy:
+
+```csharp
+public static void Print(string text)
+{
+}
+```
+
+`string` implementuje jednak wiele przydatnych interfejsów:
+
+```csharp
+IComparable<string>
+IEquatable<string>
+IEnumerable<char>
+```
+
+Dlatego `string` pasuje np. do:
+
+```csharp
+where T : IComparable<T>
+```
+
+Przykład:
+
+```csharp
+string result = Max("Anna", "Bob");
+```
+
+---
+
+# 13. Najważniejsza różnica
+
+## Jeśli potrzebujemy tylko porównywania
+
+```csharp
+where T : IComparable<T>
+```
+
+Możemy:
+
+```csharp
+a.CompareTo(b)
+```
+
+Działa np. dla:
+
+```csharp
+int
+double
+string
+DateTime
+```
+
+---
+
+## Jeśli potrzebujemy arytmetyki
+
+```csharp
+where T : INumber<T>
+```
+
+Możemy:
+
+```csharp
+a + b
+a - b
+a * b
+a / b
+```
+
+---
+
+# 14. Przydatna tabela
+
+| Constraint | Znaczenie |
+|---|---|
+| `IEquatable<T>` | można sprawdzać równość przez `Equals` |
+| `IComparable<T>` | można ustalać kolejność przez `CompareTo` |
+| `IEnumerable<T>` | można iterować po elementach |
+| `IParsable<T>` | można parsować ze `string` |
+| `ISpanParsable<T>` | można parsować z `ReadOnlySpan<char>` |
+| `INumber<T>` | pełniejsze operacje liczbowe |
+| `INumberBase<T>` | podstawowe możliwości liczbowych typów |
+| `IBinaryInteger<T>` | liczby całkowite |
+| `IFloatingPoint<T>` | liczby zmiennoprzecinkowe |
+| `IFloatingPointIeee754<T>` | liczby zgodne z IEEE 754 |
+| `IAdditionOperators<...>` | operator `+` |
+| `ISubtractionOperators<...>` | operator `-` |
+| `IMultiplyOperators<...>` | operator `*` |
+| `IDivisionOperators<...>` | operator `/` |
+
+---
+
+# 15. Przykład bardziej złożonego constraintu
+
+```csharp
+public static T AverageLike<T>(T a, T b)
+    where T : INumber<T>
+{
+    return (a + b) / T.CreateChecked(2);
+}
+```
+
+Tutaj dzięki:
+
+```csharp
+where T : INumber<T>
+```
+
+wiemy, że można:
+
+```csharp
++
+/
+```
+
+oraz korzystać z operacji generycznej matematyki.
+
+---
+
+# 16. Najważniejsze do zapamiętania
+
+```text
+IEquatable<T>
+    -> Equals()
+
+IComparable<T>
+    -> CompareTo()
+    -> porządek
+
+INumber<T>
+    -> operacje liczbowe
+
+IBinaryInteger<T>
+    -> liczby całkowite
+
+IFloatingPoint<T>
+    -> liczby zmiennoprzecinkowe
+
+IParsable<T>
+    -> Parse()
+
+IEnumerable<T>
+    -> iteracja
+```
+
+Najważniejsze rozróżnienie:
+
+```csharp
+where T : IComparable<T>
+```
+
+oznacza:
+
+> `T` można porównać i uporządkować.
+
+Natomiast:
+
+```csharp
+where T : INumber<T>
+```
+
+oznacza:
+
+> `T` zachowuje się jak typ liczbowy i można wykonywać na nim generyczne operacje arytmetyczne.
