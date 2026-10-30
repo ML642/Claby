@@ -1,0 +1,76 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+
+public class MyCollection<T> : IEnumerable<T>
+{
+    private T[] data;
+    private int count;
+
+    public MyCollection(int capacity)
+    {
+        data = new T[capacity];
+        count = 0;
+    }
+
+    public void Add(T item)
+    {
+        if (count == data.Length)
+            throw new InvalidOperationException("Collection is full");
+
+        data[count++] = item;
+    }
+
+    public IEnumerator<T> GetEnumerator()
+    {
+        return new MyEnumerator<T>(data, count);
+    }
+
+    IEnumerator IEnumerable.GetEnumerator()
+    {
+        return GetEnumerator();
+    }
+}
+
+public class MyEnumerator<T> : IEnumerator<T>
+{
+    private readonly T[] data;
+    private readonly int count;
+    private int position;
+
+    public MyEnumerator(T[] data, int count)
+    {
+        this.data = data;
+        this.count = count;
+        position = -1;
+    }
+
+    public T Current
+    {
+        get
+        {
+            if (position < 0 || position >= count)
+                throw new InvalidOperationException();
+
+            return data[position];
+        }
+    }
+
+    object IEnumerator.Current => Current!;
+
+    public bool MoveNext()
+    {
+        position++;
+
+        return position < count;
+    }
+
+    public void Reset()
+    {
+        position = -1;
+    }
+
+    public void Dispose()
+    {
+    }
+}
