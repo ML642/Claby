@@ -1522,6 +1522,917 @@ Natomiast:
 where T : INumber<T>
 ```
 
+
+# C# — najważniejsze kolekcje i ich metody
+
+## 1. `List<T>`
+
+Dynamiczna tablica.
+
+```csharp
+List<int> numbers = new();
+
+numbers.Add(10);
+numbers.Add(20);
+numbers.Add(30);
+```
+
+Najważniejsze metody i właściwości:
+
+```csharp
+list.Add(value);              // dodaje element na końcu
+list.AddRange(collection);    // dodaje wiele elementów
+
+list.Remove(value);           // usuwa pierwszy pasujący element
+list.RemoveAt(index);         // usuwa element pod indeksem
+list.RemoveAll(predicate);    // usuwa wszystkie spełniające warunek
+
+list.Contains(value);         // czy zawiera element
+list.IndexOf(value);          // indeks elementu
+
+list.Insert(index, value);    // wstawia element
+list.Clear();                 // usuwa wszystkie elementy
+
+list.Count                    // liczba elementów
+
+list[index]                   // dostęp po indeksie
+
+list.Sort();                  // sortowanie naturalne
+list.Sort(comparer);          // sortowanie przez IComparer<T>
+
+list.Reverse();               // odwraca kolejność
+```
+
+Przykład:
+
+```csharp
+List<int> numbers = [5, 2, 8];
+
+numbers.Sort();
+
+Console.WriteLine(numbers[0]); // 2
+```
+
+Najważniejsze:
+
+```text
+dostęp po indeksie      szybki
+Add                     zwykle szybki
+Contains                O(n)
+Remove                   O(n)
+```
+
+---
+
+# 2. `Dictionary<TKey, TValue>`
+
+Przechowuje pary:
+
+```text
+key -> value
+```
+
+Przykład:
+
+```csharp
+Dictionary<string, int> ages = new();
+
+ages.Add("Anna", 20);
+ages["Bob"] = 22;
+```
+
+Najważniejsze:
+
+```csharp
+dict.Add(key, value);
+
+dict[key] = value;
+
+dict[key];
+
+dict.ContainsKey(key);
+
+dict.ContainsValue(value);
+
+dict.TryGetValue(key, out value);
+
+dict.Remove(key);
+
+dict.Clear();
+
+dict.Count;
+
+dict.Keys;
+
+dict.Values;
+```
+
+Najbezpieczniejsze pobieranie:
+
+```csharp
+if (dict.TryGetValue("Anna", out int age))
+{
+    Console.WriteLine(age);
+}
+```
+
+Iteracja:
+
+```csharp
+foreach (var item in dict)
+{
+    Console.WriteLine(item.Key);
+    Console.WriteLine(item.Value);
+}
+```
+
+albo:
+
+```csharp
+foreach (var (key, value) in dict)
+{
+    Console.WriteLine($"{key}: {value}");
+}
+```
+
+Typowe zastosowania:
+
+```text
+liczenie wystąpień
+grupowanie danych
+mapowanie key -> value
+szybkie wyszukiwanie po kluczu
+```
+
+Przykład liczenia:
+
+```csharp
+Dictionary<string, int> counts = new();
+
+foreach (var name in names)
+{
+    if (counts.ContainsKey(name))
+        counts[name]++;
+    else
+        counts[name] = 1;
+}
+```
+
+---
+
+# 3. `HashSet<T>`
+
+Zbiór unikalnych elementów.
+
+```csharp
+HashSet<string> sensors = new();
+
+sensors.Add("A");
+sensors.Add("B");
+sensors.Add("A");
+```
+
+W zbiorze będą:
+
+```text
+A
+B
+```
+
+Najważniejsze:
+
+```csharp
+set.Add(value);
+
+set.Remove(value);
+
+set.Contains(value);
+
+set.Clear();
+
+set.Count;
+```
+
+Operacje na zbiorach:
+
+```csharp
+set.UnionWith(other);             // suma
+
+set.IntersectWith(other);         // część wspólna
+
+set.ExceptWith(other);            // różnica
+
+set.SymmetricExceptWith(other);   // elementy tylko w jednym zbiorze
+
+set.IsSubsetOf(other);
+
+set.IsSupersetOf(other);
+
+set.Overlaps(other);
+```
+
+Typowe zastosowanie:
+
+```text
+unikalne wartości
+usuwanie duplikatów
+szybkie Contains
+```
+
+---
+
+# 4. `SortedSet<T>`
+
+Podobny do:
+
+```csharp
+HashSet<T>
+```
+
+ale elementy są automatycznie uporządkowane.
+
+```csharp
+SortedSet<int> numbers = new();
+
+numbers.Add(5);
+numbers.Add(1);
+numbers.Add(3);
+```
+
+Iteracja:
+
+```text
+1
+3
+5
+```
+
+Najważniejsze:
+
+```csharp
+set.Add(value);
+set.Remove(value);
+set.Contains(value);
+set.Count;
+
+set.Min;
+set.Max;
+```
+
+Można podać własny comparer:
+
+```csharp
+SortedSet<Student> students =
+    new(new StudentNameComparer());
+```
+
+---
+
+# 5. `SortedDictionary<TKey, TValue>`
+
+Podobny do:
+
+```csharp
+Dictionary<TKey, TValue>
+```
+
+ale klucze są przechowywane w porządku sortowania.
+
+```csharp
+SortedDictionary<int, string> dict = new();
+
+dict[10] = "A";
+dict[2] = "B";
+dict[5] = "C";
+```
+
+Iteracja:
+
+```text
+2
+5
+10
+```
+
+Najważniejsze metody są prawie takie same jak w `Dictionary`:
+
+```csharp
+dict.Add(key, value);
+
+dict[key];
+
+dict.ContainsKey(key);
+
+dict.TryGetValue(key, out value);
+
+dict.Remove(key);
+
+dict.Count;
+
+dict.Keys;
+
+dict.Values;
+```
+
+---
+
+# 6. `Queue<T>`
+
+Kolejka FIFO:
+
+```text
+First In, First Out
+```
+
+Pierwszy dodany element wychodzi jako pierwszy.
+
+```csharp
+Queue<int> queue = new();
+```
+
+Najważniejsze:
+
+```csharp
+queue.Enqueue(value);     // dodaj na koniec
+
+queue.Dequeue();          // pobierz i usuń pierwszy
+
+queue.Peek();             // zobacz pierwszy bez usuwania
+
+queue.TryDequeue(out value);
+
+queue.TryPeek(out value);
+
+queue.Count;
+
+queue.Clear();
+
+queue.Contains(value);
+```
+
+Przykład:
+
+```csharp
+queue.Enqueue(10);
+queue.Enqueue(20);
+queue.Enqueue(30);
+
+Console.WriteLine(queue.Dequeue()); // 10
+Console.WriteLine(queue.Dequeue()); // 20
+```
+
+Typowe zastosowania:
+
+```text
+BFS
+kolejki zadań
+przetwarzanie w kolejności przyjścia
+```
+
+---
+
+# 7. `Stack<T>`
+
+Stos LIFO:
+
+```text
+Last In, First Out
+```
+
+Ostatni dodany element wychodzi jako pierwszy.
+
+```csharp
+Stack<int> stack = new();
+```
+
+Najważniejsze:
+
+```csharp
+stack.Push(value);       // dodaj na stos
+
+stack.Pop();             // pobierz i usuń ostatni
+
+stack.Peek();            // zobacz ostatni bez usuwania
+
+stack.TryPop(out value);
+
+stack.TryPeek(out value);
+
+stack.Count;
+
+stack.Clear();
+
+stack.Contains(value);
+```
+
+Przykład:
+
+```csharp
+stack.Push(10);
+stack.Push(20);
+stack.Push(30);
+
+Console.WriteLine(stack.Pop()); // 30
+Console.WriteLine(stack.Pop()); // 20
+```
+
+Typowe zastosowania:
+
+```text
+DFS
+undo
+nawiasy
+rekurencja zastępowana iteracją
+```
+
+---
+
+# 8. `LinkedList<T>`
+
+Lista dwukierunkowa.
+
+Każdy element ma:
+
+```text
+Previous <- Node -> Next
+```
+
+Tworzenie:
+
+```csharp
+LinkedList<int> list = new();
+```
+
+Najważniejsze:
+
+```csharp
+list.AddFirst(value);
+
+list.AddLast(value);
+
+list.RemoveFirst();
+
+list.RemoveLast();
+
+list.Remove(value);
+
+list.Find(value);
+
+list.FindLast(value);
+
+list.First;
+
+list.Last;
+
+list.Count;
+
+list.Clear();
+```
+
+Praca z node:
+
+```csharp
+LinkedListNode<int>? node = list.Find(10);
+
+if (node != null)
+{
+    Console.WriteLine(node.Value);
+    Console.WriteLine(node.Next?.Value);
+    Console.WriteLine(node.Previous?.Value);
+}
+```
+
+Dodawanie względem node:
+
+```csharp
+list.AddBefore(node, value);
+
+list.AddAfter(node, value);
+```
+
+Typowe zastosowanie:
+
+```text
+częste dodawanie/usuwanie elementów
+gdy mamy już LinkedListNode<T>
+```
+
+---
+
+# 9. `PriorityQueue<TElement, TPriority>`
+
+Kolejka priorytetowa.
+
+```csharp
+PriorityQueue<string, int> queue = new();
+```
+
+Dodawanie:
+
+```csharp
+queue.Enqueue("low", 10);
+queue.Enqueue("high", 1);
+queue.Enqueue("medium", 5);
+```
+
+Domyślnie mniejszy priorytet jest pobierany wcześniej.
+
+```csharp
+queue.Dequeue(); // "high"
+```
+
+Najważniejsze:
+
+```csharp
+queue.Enqueue(element, priority);
+
+queue.Dequeue();
+
+queue.Peek();
+
+queue.TryDequeue(out element, out priority);
+
+queue.TryPeek(out element, out priority);
+
+queue.Count;
+
+queue.Clear();
+```
+
+Typowe zastosowania:
+
+```text
+Dijkstra
+planowanie zadań
+wydarzenia według priorytetu
+```
+
+---
+
+# 10. Tablica `T[]`
+
+Nie jest dokładnie tym samym co `List<T>`, ale jest bardzo ważna.
+
+```csharp
+int[] array = new int[10];
+```
+
+albo:
+
+```csharp
+int[] array = [1, 2, 3];
+```
+
+Najważniejsze:
+
+```csharp
+array.Length;
+
+array[index];
+
+Array.Sort(array);
+
+Array.Reverse(array);
+
+Array.IndexOf(array, value);
+
+Array.BinarySearch(array, value);
+
+Array.Clear(array);
+```
+
+Tablica ma stały rozmiar.
+
+```csharp
+int[] array = new int[10];
+```
+
+nie może nagle mieć 20 elementów.
+
+---
+
+# 11. `IEnumerable<T>`
+
+To nie jest konkretna kolekcja.
+
+To interfejs oznaczający:
+
+> po elementach można iterować.
+
+```csharp
+IEnumerable<int>
+```
+
+Najważniejsze:
+
+```csharp
+GetEnumerator();
+```
+
+Dzięki niemu działa:
+
+```csharp
+foreach (var x in collection)
+{
+}
+```
+
+---
+
+# 12. `IEnumerator<T>`
+
+Enumerator odpowiada za przechodzenie po kolekcji.
+
+Najważniejsze:
+
+```csharp
+MoveNext();
+
+Current;
+
+Reset();
+
+Dispose();
+```
+
+Schemat:
+
+```text
+IEnumerable<T>
+    |
+    | GetEnumerator()
+    v
+IEnumerator<T>
+    |
+    +-- MoveNext()
+    +-- Current
+```
+
+---
+
+# 13. `ICollection<T>`
+
+Bazowy interfejs dla wielu kolekcji.
+
+Najważniejsze:
+
+```csharp
+Add(item);
+
+Remove(item);
+
+Contains(item);
+
+Clear();
+
+CopyTo(array, index);
+
+Count;
+
+IsReadOnly;
+```
+
+---
+
+# 14. `IList<T>`
+
+Rozszerza `ICollection<T>` o operacje indeksowe.
+
+Najważniejsze:
+
+```csharp
+list[index];
+
+IndexOf(item);
+
+Insert(index, item);
+
+RemoveAt(index);
+```
+
+`List<T>` implementuje:
+
+```csharp
+IList<T>
+```
+
+---
+
+# 15. `IDictionary<TKey, TValue>`
+
+Interfejs słowników.
+
+Najważniejsze:
+
+```csharp
+dict[key];
+
+Add(key, value);
+
+ContainsKey(key);
+
+TryGetValue(key, out value);
+
+Remove(key);
+
+Keys;
+
+Values;
+
+Count;
+```
+
+Implementują go m.in.:
+
+```csharp
+Dictionary<TKey, TValue>
+
+SortedDictionary<TKey, TValue>
+```
+
+---
+
+# 16. `ISet<T>`
+
+Interfejs zbiorów.
+
+Najważniejsze:
+
+```csharp
+Add(item);
+
+Remove(item);
+
+Contains(item);
+
+UnionWith(other);
+
+IntersectWith(other);
+
+ExceptWith(other);
+
+IsSubsetOf(other);
+
+IsSupersetOf(other);
+
+Overlaps(other);
+```
+
+Implementują:
+
+```csharp
+HashSet<T>
+
+SortedSet<T>
+```
+
+---
+
+# 17. Najważniejsze metody wspólne
+
+W wielu kolekcjach spotkasz:
+
+```csharp
+Count
+```
+
+liczba elementów.
+
+```csharp
+Add(...)
+```
+
+dodawanie.
+
+```csharp
+Remove(...)
+```
+
+usuwanie.
+
+```csharp
+Contains(...)
+```
+
+sprawdzenie obecności.
+
+```csharp
+Clear()
+```
+
+usunięcie wszystkich elementów.
+
+```csharp
+foreach (...)
+```
+
+iteracja.
+
+---
+
+# 18. Kiedy której kolekcji używać?
+
+| Potrzeba | Kolekcja |
+|---|---|
+| elementy + indeks | `List<T>` |
+| stała liczba elementów | `T[]` |
+| key → value | `Dictionary<K,V>` |
+| unikalne elementy | `HashSet<T>` |
+| unikalne + posortowane | `SortedSet<T>` |
+| key → value + posortowane klucze | `SortedDictionary<K,V>` |
+| FIFO | `Queue<T>` |
+| LIFO | `Stack<T>` |
+| szybkie operacje przez node | `LinkedList<T>` |
+| element według priorytetu | `PriorityQueue<E,P>` |
+
+---
+
+# 19. Najważniejsze do zapamiętania na lab
+
+```text
+List<T>
+    Add
+    Remove
+    RemoveAt
+    Contains
+    Count
+    [index]
+    Sort
+
+Dictionary<K,V>
+    Add
+    [key]
+    ContainsKey
+    TryGetValue
+    Remove
+    Keys
+    Values
+
+HashSet<T>
+    Add
+    Remove
+    Contains
+    UnionWith
+    IntersectWith
+
+Queue<T>
+    Enqueue
+    Dequeue
+    Peek
+
+Stack<T>
+    Push
+    Pop
+    Peek
+
+LinkedList<T>
+    AddFirst
+    AddLast
+    Remove
+    Find
+    First
+    Last
+
+PriorityQueue<E,P>
+    Enqueue
+    Dequeue
+    Peek
+```
+
+## Minimalny zestaw, który trzeba znać bardzo dobrze
+
+```text
+List<T>
+Dictionary<TKey, TValue>
+HashSet<T>
+Queue<T>
+Stack<T>
+```
+
+A następnie:
+
+```text
+SortedSet<T>
+SortedDictionary<TKey, TValue>
+LinkedList<T>
+PriorityQueue<TElement, TPriority>
+```
+
+Najważniejsze interfejsy:
+
+```text
+IEnumerable<T>   -> iteracja
+IEnumerator<T>   -> stan iteracji
+
+ICollection<T>   -> Add / Remove / Count
+
+IList<T>         -> indeksy
+
+IDictionary<K,V> -> key -> value
+
+ISet<T>          -> zbiór
+```
+
 oznacza:
 
 > `T` zachowuje się jak typ liczbowy i można wykonywać na nim generyczne operacje arytmetyczne.
