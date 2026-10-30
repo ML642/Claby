@@ -108,7 +108,7 @@ public static class T4 {
         }
         return min;
     }
-    private async Task<string> MostReadings(IEnumerable<Reading> source)
+    private  Task<string> MostReadings(IEnumerable<Reading> source)
     {
         string name;
         int max = -99;
@@ -152,18 +152,40 @@ public static class T4 {
         }
         return answer;
     }
-    
+    IList<(Reading, Reading)> SignChanges(IEnumerable<Reading> source)
+    {
+        var ordered = new List<Reading>();
+
+        foreach (var r in source)
+        {
+            ordered.Add(r);
+        }
+        ordered.Sort((a,b)=>a.At.CompareTo(b.At));
+    }
     public static Data Summarize(IEnumerable<Reading> source) {
         
     }
 }
+
 
 // =============================================================
 // TODO 5 
 // =============================================================
 
 public static class T5 {
-    public static string Classify(IReadOnlyList<Reading> readings) {
-        throw new NotImplementedException();
-    }
+    public static string Classify(List<Reading> readings)
+{
+    return readings switch
+    {
+        [] => "empty",
+        [_] => "single",
+        [var first,var second] when first.Value < second.Value => "pair-asc",
+        [var first,var second] when first.Value > second.Value => "pair-desc",
+        [_,_] => "pair-eq",
+        [var first, ..] when first.Value > 100 => "starts-high",
+        [..,var last] when last.Value < 0 => "ends low",
+        _ => "other"
+    };
+
+}
 }

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Graphss")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5ac23e2c3113d9115e9c96854b6f218e8c2db24b")]
 [assembly: System.Reflection.AssemblyProductAttribute("Graphss")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Graphss")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

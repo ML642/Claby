@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\gitfo\\Desktop\\Proga c#\\laba_graphs\\Graphss\\Graphss.csproj": {}
+    "C:\\Users\\gitfo\\Desktop\\Proga c#\\laba_graphs\\Graphss\\Graphss.csproj": {}
   },
   "projects": {
-    "c:\\Users\\gitfo\\Desktop\\Proga c#\\laba_graphs\\Graphss\\Graphss.csproj": {
+    "C:\\Users\\gitfo\\Desktop\\Proga c#\\laba_graphs\\Graphss\\Graphss.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\gitfo\\Desktop\\Proga c#\\laba_graphs\\Graphss\\Graphss.csproj",
+        "projectUniqueName": "C:\\Users\\gitfo\\Desktop\\Proga c#\\laba_graphs\\Graphss\\Graphss.csproj",
         "projectName": "Graphss",
-        "projectPath": "c:\\Users\\gitfo\\Desktop\\Proga c#\\laba_graphs\\Graphss\\Graphss.csproj",
+        "projectPath": "C:\\Users\\gitfo\\Desktop\\Proga c#\\laba_graphs\\Graphss\\Graphss.csproj",
         "packagesPath": "C:\\Users\\gitfo\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\gitfo\\Desktop\\Proga c#\\laba_graphs\\Graphss\\obj\\",
+        "outputPath": "C:\\Users\\gitfo\\Desktop\\Proga c#\\laba_graphs\\Graphss\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

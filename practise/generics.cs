@@ -1,81 +1,158 @@
-using System.Diagnostics.Contracts;
-
-public interface IShape
+public record struct Enumm<TKey, TValue, TPriority>
 {
-    double Area();
+    public TKey Key;
+    public TValue Value;
+    public TPriority Priority;
+
+    public Enumm(TKey key, TValue value, TPriority priority)
+    {
+        Key = key;
+        Value = value;
+        Priority = priority;
+    }
 }
-public class Box<T>
+
+public class Registry<TKey, TValue, TPriority>
+    where TKey : notnull, IEquatable<TKey>
+    where TPriority : IComparable<TPriority>
 {
-    T Value;
+    private List<Enumm<TKey, TValue, TPriority>> a = new();
 
-    public Box(T arg){
-        this.Value = arg; 
-    }
-
-    public override string ToString()
-    {   
-        return Value?.ToString() ?? "null";
-    }
-
-    public M myfunc<M>(M ty)
+    public void Add(
+        TKey key,
+        TValue value,
+        TPriority priority)
     {
-        return ty;
-    }
-    public (T1,T2) Create<T1,T2>(T1 first,T2 second) where T1 : new()
-    {
-        return (first,second);
-    }
+        bool found = false;
 
-    public static T3 FindLarger<T3>(T3 first,T3 second) where T3 : IShape
-    {
-        if(first.Area() < second.Area())
+        foreach (var i in a)
         {
-            return first;
-        }
-        else
-        {
-            return second;
-        }
-    }
-
-
-    public interface IStorage<T>
-    {
-        void Save(T value);
-        T Load();
-    }
-
-    public class IStor : IStorage<int>
-    {
-        public void Save(int value)
-        {
-            
-        }
-        public int Load()
-        {
-            return 3;
-        }
-    }
-
-
-    public interface ICopyable<TSelf>
-    {
-        TSelf Copy();
-    }
-
-
-    public class Person : ICopyable<Person>
-        {
-            public string Name { get; }
-
-            public Person(string name)
+            if (i.Key.Equals(key))
             {
-                Name = name;
-            }
-
-            public Person Copy()
-            {
-                return new Person(Name);
+                found = true;
+                break;
             }
         }
+
+        if (!found)
+        {
+            a.Add(
+                new Enumm<TKey, TValue, TPriority>(
+                    key,
+                    value,
+                    priority
+                )
+            );
+        }
+    }
+
+    public bool Remove(TKey key)
+    {
+        for (int i = 0; i < a.Count; i++)
+        {
+            if (a[i].Key.Equals(key))
+            {
+                a.RemoveAt(i);
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    public bool Contains(TKey key)
+    {
+        foreach (var i in a)
+        {
+            if (i.Key.Equals(key))
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    public TValue? Get(TKey key)
+    {
+        foreach (var i in a)
+        {
+            if (i.Key.Equals(key))
+            {
+                return i.Value;
+            }
+        }
+
+        return default;
+    }
+
+    public bool TryGet(
+        TKey key,
+        out TValue value)
+    {
+        foreach (var i in a)
+        {
+            if (i.Key.Equals(key))
+            {
+                value = i.Value;
+                return true;
+            }
+        }
+
+        value = default!;
+        return false;
+    }
+
+    public bool ChangePriority(
+        TKey key,
+        TPriority prior)
+    {
+        for (int i = 0; i < a.Count; i++)
+        {
+            if (a[i].Key.Equals(key))
+            {
+                var item = a[i];
+                item.Priority = prior;
+                a[i] = item;
+
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    public int Count => a.Count;
+
+    public IEnumerable<TValue> FindAll(
+        Predicate<TValue> predicate)
+    {
+        foreach (var i in a)
+        {
+            if (predicate(i.Value))
+            {
+                yield return i.Value;
+            }
+        }
+    }
+
+    public TValue? GetHighestPriority()
+    {
+        if (a.Count == 0)
+        {
+            return default;
+        }
+
+        var best = a[0];
+
+        for (int i = 1; i < a.Count; i++)
+        {
+            if (a[i].Priority.CompareTo(best.Priority) > 0)
+            {
+                best = a[i];
+            }
+        }
+
+        return best.Value;
+    }
 }
