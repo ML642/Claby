@@ -1,0 +1,15 @@
+C:\Users\gitfo\Desktop\Proga c#\student\tasks\bin\Debug\net9.0\tasks.exe
+C:\Users\gitfo\Desktop\Proga c#\student\tasks\bin\Debug\net9.0\tasks.deps.json
+C:\Users\gitfo\Desktop\Proga c#\student\tasks\bin\Debug\net9.0\tasks.runtimeconfig.json
+C:\Users\gitfo\Desktop\Proga c#\student\tasks\bin\Debug\net9.0\tasks.dll
+C:\Users\gitfo\Desktop\Proga c#\student\tasks\bin\Debug\net9.0\tasks.pdb
+C:\Users\gitfo\Desktop\Proga c#\student\tasks\obj\Debug\net9.0\tasks.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gitfo\Desktop\Proga c#\student\tasks\obj\Debug\net9.0\tasks.AssemblyInfoInputs.cache
+C:\Users\gitfo\Desktop\Proga c#\student\tasks\obj\Debug\net9.0\tasks.AssemblyInfo.cs
+C:\Users\gitfo\Desktop\Proga c#\student\tasks\obj\Debug\net9.0\tasks.csproj.CoreCompileInputs.cache
+C:\Users\gitfo\Desktop\Proga c#\student\tasks\obj\Debug\net9.0\tasks.sourcelink.json
+C:\Users\gitfo\Desktop\Proga c#\student\tasks\obj\Debug\net9.0\tasks.dll
+C:\Users\gitfo\Desktop\Proga c#\student\tasks\obj\Debug\net9.0\refint\tasks.dll
+C:\Users\gitfo\Desktop\Proga c#\student\tasks\obj\Debug\net9.0\tasks.pdb
+C:\Users\gitfo\Desktop\Proga c#\student\tasks\obj\Debug\net9.0\tasks.genruntimeconfig.cache
+C:\Users\gitfo\Desktop\Proga c#\student\tasks\obj\Debug\net9.0\ref\tasks.dll

@@ -269,3 +269,4 @@ C:\Users\gitfo\Desktop\Proga c#\laba1\Geometry.Tests\obj\Debug\net10.0\refint\Ge
 C:\Users\gitfo\Desktop\Proga c#\laba1\Geometry.Tests\obj\Debug\net10.0\Geometry.Tests.pdb
 C:\Users\gitfo\Desktop\Proga c#\laba1\Geometry.Tests\obj\Debug\net10.0\Geometry.Tests.genruntimeconfig.cache
 C:\Users\gitfo\Desktop\Proga c#\laba1\Geometry.Tests\obj\Debug\net10.0\ref\Geometry.Tests.dll
+C:\Users\gitfo\Desktop\Proga c#\laba1\Geometry.Tests\obj\Debug\net10.0\Geometry.Tests.sourcelink.json

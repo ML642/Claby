@@ -9,3 +9,4 @@ C:\Users\gitfo\Desktop\Proga c#\laba1\TemperatureConverter.Lib\obj\Debug\net10.0
 C:\Users\gitfo\Desktop\Proga c#\laba1\TemperatureConverter.Lib\obj\Debug\net10.0\refint\TemperatureConverter.Lib.dll
 C:\Users\gitfo\Desktop\Proga c#\laba1\TemperatureConverter.Lib\obj\Debug\net10.0\TemperatureConverter.Lib.pdb
 C:\Users\gitfo\Desktop\Proga c#\laba1\TemperatureConverter.Lib\obj\Debug\net10.0\ref\TemperatureConverter.Lib.dll
+C:\Users\gitfo\Desktop\Proga c#\laba1\TemperatureConverter.Lib\obj\Debug\net10.0\TemperatureConverter.Lib.sourcelink.json
