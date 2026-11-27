@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Geometry.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a6e0720a70fb42c39c108737c2add7e2d60c3622")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8bdb678f64b4c0c21465be32a98f96f4955ee174")]
 [assembly: System.Reflection.AssemblyProductAttribute("Geometry.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Geometry.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

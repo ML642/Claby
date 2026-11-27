@@ -1,0 +1,42 @@
+{
+  "version": 2,
+  "dgSpecHash": "m8BO09MWKqw=",
+  "success": false,
+  "projectFilePath": "C:\\Users\\gitfo\\Desktop\\Proga c#\\student\\NoteReader.Test\\NoteReader.Test.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Failed to retrieve information about 'Microsoft.NET.Test.Sdk' from remote source 'https://api.nuget.org/v3-flatcontainer/microsoft.net.test.sdk/index.json'.\r\n  An attempt was made to access a socket in a way forbidden by its access permissions. (api.nuget.org:443)\r\n  An attempt was made to access a socket in a way forbidden by its access permissions.",
+      "projectPath": "C:\\Users\\gitfo\\Desktop\\Proga c#\\student\\NoteReader.Test\\NoteReader.Test.csproj",
+      "filePath": "C:\\Users\\gitfo\\Desktop\\Proga c#\\student\\NoteReader.Test\\NoteReader.Test.csproj",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Failed to retrieve information about 'xunit' from remote source 'https://api.nuget.org/v3-flatcontainer/xunit/index.json'.\r\n  An attempt was made to access a socket in a way forbidden by its access permissions. (api.nuget.org:443)\r\n  An attempt was made to access a socket in a way forbidden by its access permissions.",
+      "projectPath": "C:\\Users\\gitfo\\Desktop\\Proga c#\\student\\NoteReader.Test\\NoteReader.Test.csproj",
+      "filePath": "C:\\Users\\gitfo\\Desktop\\Proga c#\\student\\NoteReader.Test\\NoteReader.Test.csproj",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Failed to retrieve information about 'xunit.runner.visualstudio' from remote source 'https://api.nuget.org/v3-flatcontainer/xunit.runner.visualstudio/index.json'.\r\n  An attempt was made to access a socket in a way forbidden by its access permissions. (api.nuget.org:443)\r\n  An attempt was made to access a socket in a way forbidden by its access permissions.",
+      "projectPath": "C:\\Users\\gitfo\\Desktop\\Proga c#\\student\\NoteReader.Test\\NoteReader.Test.csproj",
+      "filePath": "C:\\Users\\gitfo\\Desktop\\Proga c#\\student\\NoteReader.Test\\NoteReader.Test.csproj",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1900",
+      "level": "Warning",
+      "message": "Error occurred while getting package vulnerability data: An attempt was made to access a socket in a way forbidden by its access permissions. (api.nuget.org:443)",
+      "projectPath": "C:\\Users\\gitfo\\Desktop\\Proga c#\\student\\NoteReader.Test\\NoteReader.Test.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\gitfo\\Desktop\\Proga c#\\student\\NoteReader.Test\\NoteReader.Test.csproj",
+      "targetGraphs": []
+    }
+  ]
+}
