@@ -1,50 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "h8uLFqvbcPA=",
-  "success": false,
+  "dgSpecHash": "1eKh3w0iQlY=",
+  "success": true,
   "projectFilePath": "C:\\Users\\gitfo\\Desktop\\Proga c#\\student\\NoteReader\\NoteReader.csproj",
-  "expectedPackageFiles": [],
-  "logs": [
-    {
-      "code": "NU1301",
-      "level": "Error",
-      "message": "Failed to retrieve information about 'Microsoft.AspNetCore.App.Ref' from remote source 'https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.app.ref/index.json'.\r\n  An attempt was made to access a socket in a way forbidden by its access permissions. (api.nuget.org:443)\r\n  An attempt was made to access a socket in a way forbidden by its access permissions.",
-      "projectPath": "C:\\Users\\gitfo\\Desktop\\Proga c#\\student\\NoteReader\\NoteReader.csproj",
-      "filePath": "C:\\Users\\gitfo\\Desktop\\Proga c#\\student\\NoteReader\\NoteReader.csproj",
-      "targetGraphs": []
-    },
-    {
-      "code": "NU1301",
-      "level": "Error",
-      "message": "Failed to retrieve information about 'Microsoft.NETCore.App.Host.win-x64' from remote source 'https://api.nuget.org/v3-flatcontainer/microsoft.netcore.app.host.win-x64/index.json'.\r\n  An attempt was made to access a socket in a way forbidden by its access permissions. (api.nuget.org:443)\r\n  An attempt was made to access a socket in a way forbidden by its access permissions.",
-      "projectPath": "C:\\Users\\gitfo\\Desktop\\Proga c#\\student\\NoteReader\\NoteReader.csproj",
-      "filePath": "C:\\Users\\gitfo\\Desktop\\Proga c#\\student\\NoteReader\\NoteReader.csproj",
-      "targetGraphs": []
-    },
-    {
-      "code": "NU1301",
-      "level": "Error",
-      "message": "Failed to retrieve information about 'Microsoft.WindowsDesktop.App.Ref' from remote source 'https://api.nuget.org/v3-flatcontainer/microsoft.windowsdesktop.app.ref/index.json'.\r\n  An attempt was made to access a socket in a way forbidden by its access permissions. (api.nuget.org:443)\r\n  An attempt was made to access a socket in a way forbidden by its access permissions.",
-      "projectPath": "C:\\Users\\gitfo\\Desktop\\Proga c#\\student\\NoteReader\\NoteReader.csproj",
-      "filePath": "C:\\Users\\gitfo\\Desktop\\Proga c#\\student\\NoteReader\\NoteReader.csproj",
-      "targetGraphs": []
-    },
-    {
-      "code": "NU1301",
-      "level": "Error",
-      "message": "Failed to retrieve information about 'Microsoft.NETCore.App.Ref' from remote source 'https://api.nuget.org/v3-flatcontainer/microsoft.netcore.app.ref/index.json'.\r\n  An attempt was made to access a socket in a way forbidden by its access permissions. (api.nuget.org:443)\r\n  An attempt was made to access a socket in a way forbidden by its access permissions.",
-      "projectPath": "C:\\Users\\gitfo\\Desktop\\Proga c#\\student\\NoteReader\\NoteReader.csproj",
-      "filePath": "C:\\Users\\gitfo\\Desktop\\Proga c#\\student\\NoteReader\\NoteReader.csproj",
-      "targetGraphs": []
-    },
-    {
-      "code": "NU1900",
-      "level": "Warning",
-      "message": "Error occurred while getting package vulnerability data: An attempt was made to access a socket in a way forbidden by its access permissions. (api.nuget.org:443)",
-      "projectPath": "C:\\Users\\gitfo\\Desktop\\Proga c#\\student\\NoteReader\\NoteReader.csproj",
-      "warningLevel": 1,
-      "filePath": "C:\\Users\\gitfo\\Desktop\\Proga c#\\student\\NoteReader\\NoteReader.csproj",
-      "targetGraphs": []
-    }
-  ]
+  "expectedPackageFiles": [
+    "C:\\Users\\gitfo\\.nuget\\packages\\microsoft.netcore.app.ref\\9.0.20\\microsoft.netcore.app.ref.9.0.20.nupkg.sha512",
+    "C:\\Users\\gitfo\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\9.0.20\\microsoft.windowsdesktop.app.ref.9.0.20.nupkg.sha512",
+    "C:\\Users\\gitfo\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\9.0.20\\microsoft.aspnetcore.app.ref.9.0.20.nupkg.sha512",
+    "C:\\Users\\gitfo\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\9.0.20\\microsoft.netcore.app.host.win-x64.9.0.20.nupkg.sha512"
+  ],
+  "logs": []
 }

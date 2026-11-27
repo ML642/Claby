@@ -8,7 +8,7 @@
     "net9.0": []
   },
   "packageFolders": {
-    "C:\\Users\\CodexSandboxOffline\\.nuget\\packages\\": {},
+    "C:\\Users\\gitfo\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
@@ -17,7 +17,7 @@
       "projectUniqueName": "C:\\Users\\gitfo\\Desktop\\Proga c#\\student\\NoteReader\\NoteReader.csproj",
       "projectName": "NoteReader",
       "projectPath": "C:\\Users\\gitfo\\Desktop\\Proga c#\\student\\NoteReader\\NoteReader.csproj",
-      "packagesPath": "C:\\Users\\CodexSandboxOffline\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\gitfo\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\gitfo\\Desktop\\Proga c#\\student\\NoteReader\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
@@ -95,33 +95,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.401/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1301",
-      "level": "Error",
-      "message": "Failed to retrieve information about 'Microsoft.AspNetCore.App.Ref' from remote source 'https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.app.ref/index.json'.\r\n  An attempt was made to access a socket in a way forbidden by its access permissions. (api.nuget.org:443)\r\n  An attempt was made to access a socket in a way forbidden by its access permissions."
-    },
-    {
-      "code": "NU1301",
-      "level": "Error",
-      "message": "Failed to retrieve information about 'Microsoft.NETCore.App.Host.win-x64' from remote source 'https://api.nuget.org/v3-flatcontainer/microsoft.netcore.app.host.win-x64/index.json'.\r\n  An attempt was made to access a socket in a way forbidden by its access permissions. (api.nuget.org:443)\r\n  An attempt was made to access a socket in a way forbidden by its access permissions."
-    },
-    {
-      "code": "NU1301",
-      "level": "Error",
-      "message": "Failed to retrieve information about 'Microsoft.WindowsDesktop.App.Ref' from remote source 'https://api.nuget.org/v3-flatcontainer/microsoft.windowsdesktop.app.ref/index.json'.\r\n  An attempt was made to access a socket in a way forbidden by its access permissions. (api.nuget.org:443)\r\n  An attempt was made to access a socket in a way forbidden by its access permissions."
-    },
-    {
-      "code": "NU1301",
-      "level": "Error",
-      "message": "Failed to retrieve information about 'Microsoft.NETCore.App.Ref' from remote source 'https://api.nuget.org/v3-flatcontainer/microsoft.netcore.app.ref/index.json'.\r\n  An attempt was made to access a socket in a way forbidden by its access permissions. (api.nuget.org:443)\r\n  An attempt was made to access a socket in a way forbidden by its access permissions."
-    },
-    {
-      "code": "NU1900",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Error occurred while getting package vulnerability data: An attempt was made to access a socket in a way forbidden by its access permissions. (api.nuget.org:443)"
-    }
-  ]
+  }
 }

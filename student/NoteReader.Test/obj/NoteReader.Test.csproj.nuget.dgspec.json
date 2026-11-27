@@ -10,7 +10,7 @@
         "projectUniqueName": "C:\\Users\\gitfo\\Desktop\\Proga c#\\student\\NoteReader.Test\\NoteReader.Test.csproj",
         "projectName": "NoteReader.Test",
         "projectPath": "C:\\Users\\gitfo\\Desktop\\Proga c#\\student\\NoteReader.Test\\NoteReader.Test.csproj",
-        "packagesPath": "C:\\Users\\CodexSandboxOffline\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\gitfo\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\gitfo\\Desktop\\Proga c#\\student\\NoteReader.Test\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
@@ -113,7 +113,7 @@
         "projectUniqueName": "C:\\Users\\gitfo\\Desktop\\Proga c#\\student\\NoteReader\\NoteReader.csproj",
         "projectName": "NoteReader",
         "projectPath": "C:\\Users\\gitfo\\Desktop\\Proga c#\\student\\NoteReader\\NoteReader.csproj",
-        "packagesPath": "C:\\Users\\CodexSandboxOffline\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\gitfo\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\gitfo\\Desktop\\Proga c#\\student\\NoteReader\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
