@@ -1,0 +1,77 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "Warsztat/1.0.0": {
+        "dependencies": {
+          "Testably.Abstractions.Testing": "8.1.1"
+        },
+        "runtime": {
+          "Warsztat.dll": {}
+        }
+      },
+      "Testably.Abstractions.FileSystem.Interface/11.1.0": {
+        "runtime": {
+          "lib/net10.0/Testably.Abstractions.FileSystem.Interface.dll": {
+            "assemblyVersion": "11.1.0.0",
+            "fileVersion": "11.1.0.0"
+          }
+        }
+      },
+      "Testably.Abstractions.Interface/11.1.0": {
+        "dependencies": {
+          "Testably.Abstractions.FileSystem.Interface": "11.1.0"
+        },
+        "runtime": {
+          "lib/net10.0/Testably.Abstractions.Interface.dll": {
+            "assemblyVersion": "11.1.0.0",
+            "fileVersion": "11.1.0.0"
+          }
+        }
+      },
+      "Testably.Abstractions.Testing/8.1.1": {
+        "dependencies": {
+          "Testably.Abstractions.Interface": "11.1.0"
+        },
+        "runtime": {
+          "lib/net10.0/Testably.Abstractions.Testing.dll": {
+            "assemblyVersion": "8.1.1.0",
+            "fileVersion": "8.1.1.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Warsztat/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Testably.Abstractions.FileSystem.Interface/11.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ijeocqwxQWPlcneMvPrPvKbVMTVtqwp3lAOZXuAtMGJFKmzFnFc7W02QsIi8bEZDkpK8ubTz7tLAoSaYVIo7Ng==",
+      "path": "testably.abstractions.filesystem.interface/11.1.0",
+      "hashPath": "testably.abstractions.filesystem.interface.11.1.0.nupkg.sha512"
+    },
+    "Testably.Abstractions.Interface/11.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9RkXzVTsLye5est4Ixl0jj8Yby1PPMAOk81xuJYvSV2BBiJDxY3YGjOTE+Orqs5Lxr35kVPOP03FyDUyD7gmNg==",
+      "path": "testably.abstractions.interface/11.1.0",
+      "hashPath": "testably.abstractions.interface.11.1.0.nupkg.sha512"
+    },
+    "Testably.Abstractions.Testing/8.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-uSBC8srRqBYjwuYugIiuCawICJSBwh5S9OsGk38kraHYz5lOCEP5nSP1wfPhCxqcHDl/XigVZv1SBmIXmfYciw==",
+      "path": "testably.abstractions.testing/8.1.1",
+      "hashPath": "testably.abstractions.testing.8.1.1.nupkg.sha512"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "zdiJROntPjQ=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\gitfo\\Desktop\\Proga c#\\Warsztat\\Warsztat.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\gitfo\\.nuget\\packages\\testably.abstractions.filesystem.interface\\11.1.0\\testably.abstractions.filesystem.interface.11.1.0.nupkg.sha512",
+    "C:\\Users\\gitfo\\.nuget\\packages\\testably.abstractions.interface\\11.1.0\\testably.abstractions.interface.11.1.0.nupkg.sha512",
+    "C:\\Users\\gitfo\\.nuget\\packages\\testably.abstractions.testing\\8.1.1\\testably.abstractions.testing.8.1.1.nupkg.sha512"
+  ],
+  "logs": []
+}

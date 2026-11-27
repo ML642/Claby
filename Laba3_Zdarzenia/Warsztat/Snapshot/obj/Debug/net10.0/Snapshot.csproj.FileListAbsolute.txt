@@ -1,0 +1,15 @@
+C:\Users\gitfo\Desktop\Proga c#\Laba3_Zdarzenia\Warsztat\Snapshot\obj\Debug\net10.0\Snapshot.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gitfo\Desktop\Proga c#\Laba3_Zdarzenia\Warsztat\Snapshot\obj\Debug\net10.0\Snapshot.AssemblyInfoInputs.cache
+C:\Users\gitfo\Desktop\Proga c#\Laba3_Zdarzenia\Warsztat\Snapshot\obj\Debug\net10.0\Snapshot.AssemblyInfo.cs
+C:\Users\gitfo\Desktop\Proga c#\Laba3_Zdarzenia\Warsztat\Snapshot\obj\Debug\net10.0\Snapshot.csproj.CoreCompileInputs.cache
+C:\Users\gitfo\Desktop\Proga c#\Laba3_Zdarzenia\Warsztat\Snapshot\obj\Debug\net10.0\Snapshot.sourcelink.json
+C:\Users\gitfo\Desktop\Proga c#\Laba3_Zdarzenia\Warsztat\Snapshot\bin\Debug\net10.0\Snapshot.exe
+C:\Users\gitfo\Desktop\Proga c#\Laba3_Zdarzenia\Warsztat\Snapshot\bin\Debug\net10.0\Snapshot.deps.json
+C:\Users\gitfo\Desktop\Proga c#\Laba3_Zdarzenia\Warsztat\Snapshot\bin\Debug\net10.0\Snapshot.runtimeconfig.json
+C:\Users\gitfo\Desktop\Proga c#\Laba3_Zdarzenia\Warsztat\Snapshot\bin\Debug\net10.0\Snapshot.dll
+C:\Users\gitfo\Desktop\Proga c#\Laba3_Zdarzenia\Warsztat\Snapshot\bin\Debug\net10.0\Snapshot.pdb
+C:\Users\gitfo\Desktop\Proga c#\Laba3_Zdarzenia\Warsztat\Snapshot\obj\Debug\net10.0\Snapshot.dll
+C:\Users\gitfo\Desktop\Proga c#\Laba3_Zdarzenia\Warsztat\Snapshot\obj\Debug\net10.0\refint\Snapshot.dll
+C:\Users\gitfo\Desktop\Proga c#\Laba3_Zdarzenia\Warsztat\Snapshot\obj\Debug\net10.0\Snapshot.pdb
+C:\Users\gitfo\Desktop\Proga c#\Laba3_Zdarzenia\Warsztat\Snapshot\obj\Debug\net10.0\Snapshot.genruntimeconfig.cache
+C:\Users\gitfo\Desktop\Proga c#\Laba3_Zdarzenia\Warsztat\Snapshot\obj\Debug\net10.0\ref\Snapshot.dll
